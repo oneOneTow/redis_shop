@@ -7,10 +7,11 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class OrderInfo {
-    private int id;
+    private long id;
+    private long userId;
     private String orderNo;
     private String tradeNo;
-    private int consigneeId;
+    private long consigneeId;
     private BigDecimal actualMoney;
     private InvoiceType invoiceType;
     private String invoiceTitle;
@@ -20,12 +21,20 @@ public class OrderInfo {
     private Date dateUpdate;
     private Date dateCreate = new Date();
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
+    }
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
     public String getOrderNo() {
@@ -44,11 +53,11 @@ public class OrderInfo {
         this.tradeNo = tradeNo;
     }
 
-    public int getConsigneeId() {
+    public long getConsigneeId() {
         return consigneeId;
     }
 
-    public void setConsigneeId(int consigneeId) {
+    public void setConsigneeId(long consigneeId) {
         this.consigneeId = consigneeId;
     }
 

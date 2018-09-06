@@ -1,19 +1,28 @@
 package com.vens.entitys.order;
 
 public class Consignee {
-    private int id;
+    private long id;
+    private long userId;
     private String name;
     private String mobileNum;
     private String province;
     private String city;
     private String address;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
+    }
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
     public String getName() {

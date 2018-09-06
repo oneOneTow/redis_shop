@@ -6,8 +6,8 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class OrderGoods {
-    private int id;
-    private int orderId;
+    private long id;
+    private long orderId;
     private int skuId;
     private BigDecimal actualMoney;
     private DeliverStatusType deliverStatus;
@@ -17,20 +17,19 @@ public class OrderGoods {
     private Date dateUpdate;
     private Date dateCreate = new Date();
 
-
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public int getOrderId() {
+    public long getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(int orderId) {
+    public void setOrderId(long orderId) {
         this.orderId = orderId;
     }
 
