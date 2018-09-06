@@ -11,7 +11,7 @@ public class GoodsSku {
     private int stock;
     private int shopId;
     private int spuId;
-    private String optioner;
+    private String operator;
     private Date dateUpdate;
     private Date dateCreate=new Date();
 
@@ -71,12 +71,12 @@ public class GoodsSku {
         this.spuId = spuId;
     }
 
-    public String getOptioner() {
-        return optioner;
+    public String getOperator() {
+        return operator;
     }
 
-    public void setOptioner(String optioner) {
-        this.optioner = optioner;
+    public void setOperator(String operator) {
+        this.operator = operator;
     }
 
     public Date getDateUpdate() {

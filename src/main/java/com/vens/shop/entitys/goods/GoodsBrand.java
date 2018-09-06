@@ -5,7 +5,7 @@ import java.util.Date;
 public class GoodsBrand {
     private int id;
     private String brandName;
-    private String optioner;
+    private String operator;
     private Date dateUpdate;
     private Date dateCreate = new Date();
 
@@ -25,12 +25,12 @@ public class GoodsBrand {
         this.brandName = brandName;
     }
 
-    public String getOptioner() {
-        return optioner;
+    public String getOperator() {
+        return operator;
     }
 
-    public void setOptioner(String optioner) {
-        this.optioner = optioner;
+    public void setOperator(String operator) {
+        this.operator = operator;
     }
 
     public Date getDateUpdate() {

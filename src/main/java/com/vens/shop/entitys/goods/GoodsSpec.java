@@ -6,7 +6,7 @@ public class GoodsSpec {
     private int id;
     private String specNo;
     private String specName;
-    private String optioner;
+    private String operator;
     private Date dateUpdate;
     private Date dateCreate=new Date();
 
@@ -34,12 +34,12 @@ public class GoodsSpec {
         this.specName = specName;
     }
 
-    public String getOptioner() {
-        return optioner;
+    public String getOperator() {
+        return operator;
     }
 
-    public void setOptioner(String optioner) {
-        this.optioner = optioner;
+    public void setOperator(String operator) {
+        this.operator = operator;
     }
 
     public Date getDateUpdate() {
