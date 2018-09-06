@@ -5,25 +5,16 @@ import com.vens.enums.GenderType;
 import java.util.Date;
 
 public class UserInfo {
-    private int id;
-    private int userId;
+    private long userId;
     private GenderType gender;
     private Date birthdate;
     private String headPortrait;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 
