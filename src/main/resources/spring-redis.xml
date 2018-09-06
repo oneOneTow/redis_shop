@@ -32,7 +32,7 @@
         </constructor-arg>
     </bean>
 
-    <bean id="redisDataSource" class="com.vens.redisHelper.RedisDataSourceImpl"/>
-    <bean id="redisClientTemplate" class="com.vens.redisHelper.RedisClientTemplate"/>
+    <bean id="redisDataSource" class="com.vens.shop.redisHelper.RedisDataSourceImpl"/>
+    <bean id="redisClientTemplate" class="com.vens.shop.redisHelper.RedisClientTemplate"/>
 
 </beans>
