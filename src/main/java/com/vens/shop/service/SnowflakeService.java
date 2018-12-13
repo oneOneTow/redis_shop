@@ -7,6 +7,31 @@ package com.vens.shop.service;
  */
 
 import com.vens.shop.enums.CommonStaticSource;
+/**
+ * 该方法现在不work
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
 
 /**
  * Twitter_Snowflake<br>

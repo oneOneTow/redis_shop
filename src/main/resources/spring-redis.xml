@@ -19,20 +19,28 @@
         <property name="testOnReturn" value="${redis.testOnReturn}"/>
     </bean>
 
-    <bean id="shardedJedisPool" class="redis.clients.jedis.ShardedJedisPool" scope="singleton">
-        <constructor-arg index="0" ref="jedisPoolConfig"/>
-        <constructor-arg index="1">
+    <bean id="shardedJedisPool" class="redis.clients.jedis.ShardedJedisPool">
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"/>
+        <constructor-arg name="shards">
             <list>
                 <bean class="redis.clients.jedis.JedisShardInfo">
-                    <constructor-arg index="0" value="${redis.host}"/>
-                    <constructor-arg index="1" value="${redis.port}" type="int"/>
+                    <constructor-arg name="host" value="${redis.host}"/>
+                    <constructor-arg name="port" value="${redis.port}"/>
+                    <constructor-arg name="timeout" value="${redis.timeout}"/>
                     <property name="password" value="${redis.pass}"/>
                 </bean>
             </list>
         </constructor-arg>
     </bean>
-
-    <bean id="redisDataSource" class="com.vens.shop.redisHelper.RedisDataSourceImpl"/>
-    <bean id="redisClientTemplate" class="com.vens.shop.redisHelper.RedisClientTemplate"/>
-
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"/>
+        <constructor-arg name="host" value="${redis.host}"/>
+        <constructor-arg name="port" value="${redis.port}"/>
+        <constructor-arg name="timeout" value="${redis.timeout}"/>
+        <constructor-arg name="password" value="${redis.pass}"/>
+    </bean>
+    <bean id="redisHelper" class="com.vens.redis.RedisHelper">
+        <property name="jedisPool" ref="jedisPool"/>
+        <property name="shardedJedisPool" ref="shardedJedisPool"/>
+    </bean>
 </beans>
